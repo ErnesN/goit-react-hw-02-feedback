@@ -1,0 +1,43 @@
+
+.title {
+    
+    font-size: 24px;
+    color: blueviolet;
+}
+
+.feedback {
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    gap: 30px;
+}
+.block {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 15px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(145deg, rgba(34, 193, 195, 1) 0%, rgba(65, 253, 45, 1) 100%);
+}
+
+.button {
+   margin-left: 20px;
+   padding: 5px 10px;
+   width: 100px;
+   background-color: rgb(57, 14, 212);
+   border: none;
+   border-radius: 5px;
+   color: white;
+   font-weight: 500;
+   &:hover {
+    background-color: cornflowerblue;
+    color: rgb(57, 14, 212);
+   }
+}
+
+.text {
+    text-align: left;
+    font-weight: 500;
+    color: white;
+}
