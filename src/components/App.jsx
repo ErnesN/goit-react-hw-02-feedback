@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import styles from './feedback.module.scss';
+import styles from './app.module.scss';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistic from './Statistic/Statistic';
 import Section from './Section/Section';
@@ -40,7 +40,10 @@ export class App extends Component {
     return (
       <div className={styles.feedback}>
         <Section title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+          <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
         </Section>
         <Section title="Statistics">
           {total === 0 ? (
