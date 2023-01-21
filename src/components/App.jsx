@@ -4,6 +4,7 @@ import styles from './feedback.module.scss';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistic from './Statistic/Statistic';
 import Section from './Section/Section';
+import Notification from './Notification/Notification';
 
 export class App extends Component {
   state = {
@@ -42,13 +43,17 @@ export class App extends Component {
           <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
         <Section title="Statistics">
-          <Statistic
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positivePercentage={positiveFeedback}
-          />
+          {total === 0 ? (
+            <Notification message="There is no feedback" />
+          ) : (
+            <Statistic
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positiveFeedback}
+            />
+          )}
         </Section>
       </div>
     );
